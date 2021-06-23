@@ -8,9 +8,9 @@ body{
 }
 
 h1 {
-  padding-left:15px;
-  color:#daa521;
-  font-size:7vw;
+    padding-left:15px;
+    color:#daa521;
+    font-size:7vw;
 }
 
 #message-el {
@@ -23,14 +23,13 @@ p {
 }
 
 button {
-  display:block;
-  background:#daa521;
-  color:#017334;
-  font-weight:bold;
-  font-size:3vw;
-  width:35vw;
-  padding:15px;
-  margin-bottom:10px;
-  border:none;
-  border-radius:3px;
+    background:#daa521;
+    color:#017334;
+    font-weight:bold;
+    font-size:18px;
+    width:150px;
+    padding:10px;
+    margin: 2px, 0;
+    border:none;
+    border-radius:3px;
 }
