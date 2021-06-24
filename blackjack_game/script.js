@@ -43,9 +43,10 @@ function getNewCard() {
     message = "Drawing a new card from the deck!";
     messageEl.textContent = message;
     let card = 2;
-    sum += card;
     renderGame();
-    // cardDisplay.textContent = "Cards: " + cards[];
+    cards.push(card);
+    sum += card;
+    cardDisplay.textContent = "Cards: " +  cards;
 }
 
 startGame.addEventListener("click", startTheGame);
