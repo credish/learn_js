@@ -1,3 +1,8 @@
+// Object for Player and Chips - key and value
+let player = {
+    name: "Celeste",
+    chips: "200"
+}
 let cards = []; // ordered list of cards
 let sum=0;
 let hasBlackJack = false;
@@ -9,13 +14,9 @@ let messageEl = document.getElementById("message-el");
 let cardDisplay = document.getElementById("cards-display");
 let sumDisplay = document.getElementById("sum-display");
 // let sumDisplay = document.querySelector("#sum-display");
-
-let player = {
-    name: "Celeste",
-    chips: 145 
-}
-
 let playerEl = document.getElementById("player-el");
+
+// Object with the 
 playerEl.textContent = player.name + ": $" + player.chips;
 
 function getRandomCard(){
