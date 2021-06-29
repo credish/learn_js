@@ -1,23 +1,39 @@
+// Reminders:
+// localStorage.setItem(key, value) localStorage.setItem("myLeads", "www.examplelead.com");
+// localStorage.getItem(key) console.log(localStorage.getItem("myLeads"));
+// localStorage.clear() localStorage.clear("myLeads");
+// Both key and value need to be strings
+
+// myLeads=JSON.parse(myLeads);
+// myLeads.push("www.awesomelead2.com");
+// myLeads=JSON.stringify(myLeads);
+// // console.log(typeof myLeads);
+
+// localStorage.setItem("myLeads", JSON.stringify(myLeads));
+// var storeMyLeads = JSON.parse(localStorage.getItem("myLeads"));
+
 let myLeads=[];
+let oldLeads=[];
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
+const deleteBtn = document.getElementById("delete-btn");
 const ulEl = document.getElementById("ul-el");
+const leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
-inputBtn.addEventListener("click", function(){
-    myLeads.push(inputEl.value);
-    inputEl.value="";
-    renderLeads();
-});
+if (leadsFromLocalStorage) {
+    myLeads = leadsFromLocalStorage;
+    render(myLeads);
+}
 
-function renderLeads () {
+function render (leads) {
     let listItems="";
-    for (let i = 0, n = myLeads.length; i < n; i++){
+    for (let i = 0, n = leads.length; i < n; i++){
         // listItems += "<li><a target='_blank' href=' " + myLeads[i] + "'>" + myLeads[i] + "</a></li>";
         //Template String
-         listItems += `
+        listItems += `
             <li>
-                <a target='_blank' href='${myLeads[i]}'>  
-                    ${myLeads[i]}
+                <a target='_blank' href='${leads[i]}'>  
+                    ${leads[i]}
                 </a>
             </li>`;
         // This is an alternative way to do the previous line ulEl.innerHTML += "<li>" + myLeads[i] + "</li>";
@@ -29,6 +45,23 @@ function renderLeads () {
 
     ulEl.innerHTML = listItems;
 }
+
+inputBtn.addEventListener("click", function(){
+    myLeads.push(inputEl.value);
+    inputEl.value="";
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads);
+});
+
+deleteBtn.addEventListener("dblclick", function(){
+    localStorage.clear();
+    myLeads = [];
+    render(myLeads);
+});
+
+
+
+
 
 
 
