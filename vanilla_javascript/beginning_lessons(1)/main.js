@@ -259,7 +259,7 @@
 
 // OBJECT ORIENTED PROGRAMMING
 // CONSTRUCTOR FUNCTIONS W/ PROTOTYPES & ES6 CLASSES
-// PROTOTYPES
+// OBJECTS
 // Constructors should have capitalized letter 
 // Pass in properties you want to set
 // Set the properties of the object
@@ -279,33 +279,105 @@
 // console.log(person2.dob.getFullYear());
 
 // Can add methods to this.Person object
-function Person(firstName, lastName, dob) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    //this.dob = dob; - will show what you have added under dob 11-12-1983
-    this.dob = new Date(dob); // will show Fri Nov 06 1981 00:00:00 GMT-0500 (Eastern Standard Time)
-    this.getBirthYear = function() {
-        return this.dob.getFullYear();
-    }
-    this.getFullName = function() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-;}
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     //this.dob = dob; - will show what you have added under dob 11-12-1983
+//     this.dob = new Date(dob); // will show Fri Nov 06 1981 00:00:00 GMT-0500 (Eastern Standard Time)
+//     this.getBirthYear = function() {
+//         return this.dob.getFullYear();
+//     }
+//     this.getFullName = function() {
+//         return `${this.firstName} ${this.lastName`;
+//     }
+// ;}
     
-    // Instantiate the Object with constructor function
-    const person1 = new Person('Celeste', 'Stamper', '12-11-1983');
-    const person2 = new Person('Ramsez', 'Stamper', '11-06-1981');
+//     // Instantiate the Object with constructor function
+//     const person1 = new Person('Celeste', 'Stamper', '12-11-1983');
+//     const person2 = new Person('Ramsez', 'Stamper', '11-06-1981');
     
-    // console.log(person1.dob);
-    // console.log(person2.dob.getFullYear());
+//     // console.log(person1.dob);
+//     // console.log(person2.dob.getFullYear());
 
-    console.log(person1.getBirthYear());
-    console.log(person1.getFullName());
+//     console.log(person1.getBirthYear());
+//     console.log(person1.getFullName());
+
+// PUTTING FUNCTIONS INTO PROTOTYPES
+
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     //this.dob = dob; - will show what you have added under dob 11-12-1983
+//     this.dob = new Date(dob); // will show Fri Nov 06 1981 00:00:00 GMT-0500 (Eastern Standard Time)
+// ;}
+    
+//     // // Instantiate the Object with constructor function
+//     // const person1 = new Person('Celeste', 'Stamper', '12-11-1983');
+//     // const person2 = new Person('Ramsez', 'Stamper', '11-06-1981');
+    
+//     // // console.log(person1.dob);
+//     // // console.log(person2.dob.getFullYear());
+
+//     // console.log(person1.getBirthYear());
+//     // console.log(person1.getFullName());
+
+// Person.prototype.getBirthYear = function() {
+//     return this.dob.getFullYear();
+// }
+
+// Person.prototype.getFullName = function() {
+//     return `${this.firstName} ${this.lastName}`;
+// }
+
+//  const person1 = new Person('Celeste', 'Stamper', '12-11-1983');
+//  const person2 = new Person('Ramsez', 'Stamper', '11-06-1981');
+
+// console.log(person1.getBirthYear());
+// console.log(person1.getFullName());
 
 
+// ES6 CLASSES - PRETTIER WAY TO CODE
+// function Person(firstName, lastName, dob) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//         //this.dob = dob; - will show what you have added under dob 11-12-1983
+//         this.dob = new Date(dob); // will show Fri Nov 06 1981 00:00:00 GMT-0500 (Eastern Standard Time)
+//     ;}
+        
+//     Person.prototype.getBirthYear = function() {
+//         return this.dob.getFullYear();
+//     }
+    
+//     Person.prototype.getFullName = function() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+
+    // CLASS
+//     class Person {
+//         constructor(firstName, lastName, dob) {
+//             this.firstName = firstName;
+//         this.lastName = lastName;
+//         this.dob = new Date(dob); 
+//         }
+
+//         getBirthYear() {
+//             return this.dob.getFullYear();
+//         }
+
+//         getFullName() {
+//             return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+          
+    // iNSTANTIATE OBJECT
+    //  const person1 = new Person('Celeste', 'Stamper', '12-11-1983');
+    //  const person2 = new Person('Ramsez', 'Stamper', '11-06-1981');
+    
+    // console.log(person1.getBirthYear());
+    // console.log(person1.getFullName());
 
 
-
+// DOM
 
 
 
