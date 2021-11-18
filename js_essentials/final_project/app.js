@@ -7,8 +7,6 @@ function set() {
     //     let cssProperty = element.getAttribute("id");
     //  });
 
-
-   
     for (let i = 0, n = elements.length; i < n; i++){
         let cssProperty =  elements[i].getAttribute('id') ;
         let cssValue =  elements[i].value ;
