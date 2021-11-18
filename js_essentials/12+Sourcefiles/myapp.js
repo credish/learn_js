@@ -15,10 +15,16 @@
 
 // console.log( makeCoffee( 2, 20 ) );
 
-let car = {
-    color: "red",
-    speed: 200,
-    drive: function() {
-        return "drive";
-    }
-}
+// let car = {
+//     color: "red",
+//     speed: 200,
+//     drive: function() {
+//         return "drive";
+//     }
+// };
+
+// let shoppingList = ["Apple", "Orange", "Pear"];
+
+var car = {
+make: volvo  
+};
